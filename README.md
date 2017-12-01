@@ -1,6 +1,5 @@
 Usage:
 
-* pip install as normal
 * Add `dynamic_fields` to `INSTALLED_APPS`
 * Add to your form as a widget:
 ```
@@ -41,4 +40,5 @@ class MyForm(forms.ModelForm):
 Requirements:
 
 * Django 1.11+
-* Python 3.5+
+* Python 3.5+ (built/tested with 3.6.2)
+* jQuery (built/tested with 1.12.4)
