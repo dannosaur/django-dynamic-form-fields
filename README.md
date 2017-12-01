@@ -34,6 +34,7 @@ class MyForm(forms.ModelForm):
                 include_empty_choice=True,
                 empty_choice_label="Please choose an option",
             )
+        }
 ```
 * Ensure that form media is included with the rest of your view's media
 
