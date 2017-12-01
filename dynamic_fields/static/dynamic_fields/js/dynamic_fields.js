@@ -73,5 +73,18 @@
         return this;
     };
 
-    $('select[data-dynamic-field-model]').dynamic_field();
+    var data_attr = 'data-dynamic-field-model';
+    var selector = 'select[' + data_attr + ']';
+    $(document).ready(function() {
+        $(selector).dynamic_field();
+        $(document).on('DOMNodeInserted', function (e) {
+            var target = $(e.target);
+            if (target.find(selector)) {
+                var found = target.find(selector).first();
+                if (found.is(selector)) {
+                    found.dynamic_field();
+                }
+            }
+        });
+    });
 }(jQuery));
